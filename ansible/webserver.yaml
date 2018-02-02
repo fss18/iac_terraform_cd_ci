@@ -1,0 +1,17 @@
+--- # sample run for AL Agents in ansible roles
+- name: Apply AL Agent install
+  hosts: web
+  become: yes
+  vars:
+    tmc_internal_ip: "{{ TMC_INTERNAL_IP }}"
+    tmc_check_timeout: "{{ TMC_CHECK_TIMEOUT | default('30') }}"
+  pre_tasks:
+    - name: Check if TMC port 7777 is ready
+      wait_for:
+        host="{{ tmc_internal_ip }}"
+        port=7777
+        sleep=10
+        state=started
+        timeout="{{ tmc_check_timeout }}"
+  roles:
+    - al-agents
