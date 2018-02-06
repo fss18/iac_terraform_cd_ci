@@ -143,7 +143,7 @@ output "private_ip" {
 }
 
 output "instance_id" {
-	value = "${aws_eip.tmc.id}"
+	value = "${aws_instance.tmc.id}"
 }
 
 output "sg_id" {
