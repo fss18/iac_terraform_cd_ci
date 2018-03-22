@@ -90,7 +90,7 @@ def post_credentials(token, payload, target_cid, insight_dc):
     return RESULT
 
 def get_source_environment(token, target_cid, cred_id, project_name, insight_dc):
-    api_endpoint = "https://api.cloudinsight" + insight_dc + "/sources/v1/" + target_cid + "/sources?source.type=environment"
+    api_endpoint = "https://api.cloudinsight" + insight_dc + "/sources/v1/" + target_cid + "/sources?source.type=environment&source.config.collection_type=aws"
     request = requests.get(api_endpoint, headers={'x-aims-auth-token': token}, verify=False)
     results = json.loads(request.text)
     for source in results["sources"]:
