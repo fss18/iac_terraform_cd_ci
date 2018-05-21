@@ -90,7 +90,7 @@ reldir=`dirname $0`
 cd $reldir
 cd ../
 DIRECTORY=`pwd`
-ENV="staging"
+ENV="$ENV"
 printf "\n${RED}PROJECT DIRECTORY=${NC} $DIRECTORY\n"
 
 
