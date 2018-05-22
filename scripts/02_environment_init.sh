@@ -76,7 +76,7 @@ reldir=`dirname $0`
 cd $reldir
 cd ../
 DIRECTORY=`pwd`
-ENV="staging"
+ENV="$ENVIRONMENT"
 printf "\n${RED}PROJECT DIRECTORY=${NC} $DIRECTORY\n"
 
 #Perform terraform init

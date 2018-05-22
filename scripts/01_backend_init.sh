@@ -64,7 +64,6 @@ reldir=`dirname $0`
 cd $reldir
 cd ../
 DIRECTORY=`pwd`
-ENV="staging"
 printf "\n${RED}PROJECT DIRECTORY=${NC} $DIRECTORY\n"
 
 #Initialize backend supporting data
