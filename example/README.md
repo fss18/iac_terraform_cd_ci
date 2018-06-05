@@ -9,7 +9,7 @@ Run this under ./scripts/
     S3_BUCKET_NAME="my-project-terraform-state"
     DYNAMO_DB_NAME="my-project-terraform-state"
     CRED_PATH="~/.aws/credentials"
-    ./backend_init.sh --profile $PROFILE --region $REGION --cred $CRED_PATH --S3 $S3_BUCKET_NAME --dynamo $DYNAMO_DB_NAME
+    ./01_backend_init.sh --profile $PROFILE --region $REGION --cred $CRED_PATH --S3 $S3_BUCKET_NAME --dynamo $DYNAMO_DB_NAME
 
 **Initialize each environment templates**
 
